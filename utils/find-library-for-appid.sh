@@ -36,6 +36,7 @@ for steam_install in "${steam_install_candidates[@]}"; do
 done
 
 for libdir in "${steam_libraries[@]}"; do
+	echo "$libdir"
 	echo "Searching for game in library '$libdir'" >&2
 	compat_data="$libdir/steamapps/compatdata/$appid"
 	if [ -d "$compat_data" ]; then
